@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+<script>
+    function toggleRole(role) {
+        document.getElementById('role').value = role;
+        document.getElementById('studentBtn').classList.remove('toggled');
+        document.getElementById('tutorBtn').classList.remove('toggled');
+        document.getElementById(role + 'Btn').classList.add('toggled');
+    }
+</script>
+<div class="screen-center">
+    <div class="card signup-card">
+        <span class="card-title">
+            Sign Up
+        </span>
+        <span class="card-desc">
+            Create your account by entering info below.
+        </span>
+        <form action="signup" method="post">
+            <input type="email" name="email" placeholder="Email address..." required>
+            <div class="form-set">
+                <input type="text" name="first_name" placeholder="First name..." required>
+                <input type="text" name="last_name" placeholder="Last name..." required>
+            </div>
+            <input type="password" name="password" placeholder="Password..." required>
+            <input type="password" name="confirm_password" placeholder="Confirm password..." required>
+            <div class="form-set">
+                <!-- user chooses between student or tutor -->
+                <button type="button" class="toggled">Student</button>
+                <a href="become-a-tutor" class="ignore-width">
+                    <button type="button">Tutor</button>
+                </a>
+            </div>
+            <button type="submit" class="primary">Sign Up</button>
+        </form>
+        <span class="card-footer">
+            Already have an account? <a href="login" class="underline">Login</a>
+        </span>
+    </div>
+</div>
+
+{% endblock %}

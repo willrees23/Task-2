@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    width: fit-content;
+    position: relative;
+}
+
+a.underline {
+    color: #007bff;
+}
+
+a.underline::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    top: 95%;
+    bottom: -3%;
+    left: 50%;
+    right: 50%;
+    background-color: #007bff;
+    transition: all 0.3s ease;
+}
+
+a.underline:hover::after {
+    left: 0%;
+    right: 0%;
+}
+
+a.ignore-width {
+    width: 110%;
+}
+
+input {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 12px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+button.toggled {
+    background-color: #4fa4ff;
+    color: white;
+}
+
+.form-set button {
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.form-set {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+button.primary {
+    background-color: #007bff;
+    color: white;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+main .section {
+    margin-top: 30px;
+    padding: 0 70px;
+}
+
+main .highlight {
+    background-color: #f5f5f5;
+    padding: 30px 70px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 70px;
+}
+
+@media all and (min-width: 1500px) {
+    .hero-main {
+        justify-content: center;
+        gap: 250px;
+    }
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.hero-desc {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.hero-btn {
+    margin-top: 20px;
+    width: fit-content;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.navbar-logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.navbar-links {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-links-text a {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar-links-text a:hover {
+    background-color: #f5f5f5;
+}
+
+.navbar-links div {
+    display: flex;
+    gap: 15px;
+}
+
+.screen-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+}
+
+.card {
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.card-desc {
+    font-size: 16px;
+}
+
+.card-footer {
+    display: flex;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    padding-top: 15px;
+    margin-top: 15px;
+
+    gap: 10px;
+}
+
+.stats-banner {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 200px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stats-title {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.stats-desc {
+    font-size: 20px;
+}
+
+.features {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media all and (min-width: 1750px) {
+    .features {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media all and (min-width: 2000px) {
+    .features {
+        flex-direction: row;
+    }
+}
+
+.feature {
+    display: flex;
+    gap: 20px;
+    padding: 20px 200px;
+}
+
+.feature img {
+    width: 200px;
+    height: 200px;
+}
+
+.feature-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
